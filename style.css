@@ -262,3 +262,14 @@ footer > div{
 :is(.img-profile, .img-who-am-i){
     box-sizing: 1px 1px 1px 1px var(--cyan1);
 }
+
+@media (max-width: 600px) {
+    .first-section {
+        display: flex;
+        justify-content: center;  
+        
+        flex-wrap: wrap;
+        align-items: center;
+           
+    }
+  }
