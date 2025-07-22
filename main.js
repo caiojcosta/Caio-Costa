@@ -3,7 +3,6 @@ function getProjects() {
     const projectUrls = ['Alura-Back-End', 'caio', 'Flappy-Bird', 'ATIVIDADES'];
     const projectPromises = projectUrls.map(projectUrl => fetch(`${baseUrl}${projectUrl}`, { method: 'GET' }));
     var loadingElement = document.getElementById('loading');
-
     Promise.all(projectPromises)
         .then(responses => Promise.all(responses.map(response => response.json())))
         .then(projectsData => {
@@ -19,7 +18,6 @@ function getProjects() {
 
 function showProject(data) {
     var listElement = document.getElementById('my-projects-list')
-
     for (let i = 0; i < data.length; i++)
     {
         let a = document.createElement("a")
@@ -31,4 +29,5 @@ function showProject(data) {
         listElement.appendChild(a)
     }
 }
-    getProjects();
+
+getProjects();

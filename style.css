@@ -35,7 +35,7 @@
 
 body {
     background-color: var(--dark6);
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Lato';
 }
 
@@ -66,10 +66,29 @@ nav {
     flex-wrap: wrap;
 }
 
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.language-switcher img {
+    width: 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 0.6;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.language-switcher img:hover,
+.language-switcher img.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
 .nav-link {
     text-decoration: none;
     color: var(--dark2);
-
 }
 
 .nav-link:hover {
@@ -105,7 +124,6 @@ nav {
 
 .link-action {
     text-decoration: none;
-    width: 200px;
     text-align: center;
     background-color: transparent;
     border: 1px solid var(--cyan1);
@@ -127,8 +145,7 @@ section {
     justify-content: space-evenly;  
     gap: 2rem;
     flex-wrap: wrap;
-    align-items: center;
-    width: 650px;   
+    align-items: center; 
 }
 
 .first-section > div{
@@ -165,7 +182,6 @@ strong {
     width: 100%;     
 }
 
-
 :is(.second-section, .fourth-section){
     background-color: var(--dark2);  
     display: flex;  
@@ -199,7 +215,6 @@ strong {
 .title{
     color: var(--dark5);
 }
-
 
 .third-section {
     display: flex;
@@ -243,7 +258,7 @@ footer > div{
 #my-projects-list{
     display: flex;
     gap: 2rem;
-    flex: wrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -255,21 +270,59 @@ footer > div{
 
 #my-projects-list a:hover{
     color: var(--dark5);
-    transition: 4s;
+    transition: .4s;
     cursor: pointer;
 }
 
 :is(.img-profile, .img-who-am-i){
-    box-sizing: 1px 1px 1px 1px var(--cyan1);
+    box-shadow: 0px 0px 15px -4px var(--cyan1);
 }
 
-@media (max-width: 600px) {
-    .first-section {
-        display: flex;
-        justify-content: center;  
-        
-        flex-wrap: wrap;
-        align-items: center;
-           
+/* --- Media Queries para Responsividade --- */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+        text-align: center;
     }
-  }
+
+    section, footer {
+        padding: 3rem 2rem;
+    }
+
+    .first-section {
+        justify-content: center;
+    }
+
+    .first-section > div {
+        /* Centraliza o conteúdo do texto e o botão */
+        align-items: center;
+    }
+
+    .first-section p {
+        text-align: center;
+    }
+
+    .third-section > div {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .box-img-main {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem;
+        letter-spacing: 4px;
+    }
+}
