@@ -281,33 +281,17 @@ footer > div{
 /* --- Media Queries para Responsividade --- */
 
 @media (max-width: 768px) {
-<<<<<<< HEAD
     h1 { text-align: center; }
 
     section, footer {
         padding: 3rem 2rem;
     }
 
-=======
-    h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    section, footer {
-        padding: 3rem 2rem;
-    }
-
->>>>>>> e4afce3bef789342cb4c19c263f6de9afbee1c84
     .first-section {
         justify-content: center;
     }
 
-<<<<<<< HEAD
     .text-content {
-=======
-    .first-section > div {
->>>>>>> e4afce3bef789342cb4c19c263f6de9afbee1c84
         /* Centraliza o conteúdo do texto e o botão */
         align-items: center;
     }
@@ -335,16 +319,10 @@ footer > div{
 
 @media (max-width: 480px) {
     h1 {
-<<<<<<< HEAD
         letter-spacing: 4px;
     }
 
     nav {
         gap: 1.5rem;
     }
-=======
-        font-size: 2.2rem;
-        letter-spacing: 4px;
-    }
->>>>>>> e4afce3bef789342cb4c19c263f6de9afbee1c84
 }
